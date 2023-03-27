@@ -53,9 +53,36 @@ main {
 
 .inputs {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--light-clr);
+  gap: 10rem;
+}
+
+.input-user,
+.input-password {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  font-size: 4rem;
+  border: none;
+  outline: none;
+  appearance: none;
+  background: rgba(1, 1, 1, 10%);
+  padding: 50px 100px;
+  border-radius: 3rem;
+  opacity: 70%;
+  background-color: var(--accent-clr);
+  color: var(--dark-clr);
+}
+
+.input-user:hover,
+.input-password:hover,
+.input-user:active,
+.input-password:active {
+  opacity: 100%;
+  background-color: var(--accent-clr);
 }
 
 .links {
@@ -65,10 +92,41 @@ main {
   white-space: nowrap;
 }
 
+.links a {
+  opacity: 60%;
+  transition: 0.5s;
+}
+
+.links a:hover {
+  opacity: 80%;
+  color: var(--accent-clr);
+}
+
+.links a:active {
+  opacity: 100%;
+  color: var(--accent-clr);
+  transform: translateY(-2rem);
+}
+
 a {
   color: var(--light-clr);
   text-decoration: none;
   font-size: 4.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(600px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.main-img {
+  animation-name: slideIn;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
 }
 
 @media (max-width: 1800px) {
