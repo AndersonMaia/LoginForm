@@ -18,6 +18,7 @@ body {
   justify-content: center;
   gap: 10rem;
   height: 100vh;
+  max-width: 50%;
   margin-top: 10rem;
   background: linear-gradient(to bottom, var(--dark-clr), var(--black));
   color: var(--secondary-clr);
@@ -143,11 +144,17 @@ a {
 .other-sign-in {
   color: var(--light-clr);
   transition: 0.3s;
+  font-size: 5rem;
+  gap: 1rem;
 }
 
 .other-sign-in a {
   font-size: 5rem;
   color: var(--secondary-clr);
+}
+
+.other-sign-in p:nth-child(1) {
+  margin-bottom: 5rem;
 }
 
 .other-sign-in a:hover,
